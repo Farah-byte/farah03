@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: rgb(43, 76, 88);}
+       </style>
+</head>
+<body>
+    <script>
+        // Q # 01
+        function displayDateTime() {
+            var now = new Date();
+            document.write("Q # 01: Current Date and Time: " + now + "<br><br>");
+        }
+    
+        displayDateTime();
+    
+        // Q # 02
+        function greetUser(firstName, lastName) {
+            var fullName = firstName + " " + lastName;
+            document.write("Q # 02: Hello, " + fullName + "!<br><br>");
+        }
+    
+        greetUser("FARAH", "SHAH");
+    
+        // Q # 03
+        function addNumbers(num1, num2) {
+            return num1 + num2;
+        }
+    
+        var result = addNumbers(5, 7);
+        document.write("Q # 03: Sum: " + result + "<br><br>");
+    
+        // Q # 04
+        function calculator(num1, num2, operator) {
+            var result;
+            if (operator === '+') {
+                result = num1 + num2;
+            } else if (operator === '-') {
+                result = num1 - num2;
+            } else if (operator === '*') {
+                result = num1 * num2;
+            } else if (operator === '/') {
+                result = num1 / num2;
+            } else {
+                result = "Invalid operator";
+            }
+            return result;
+        }
+    
+        document.write("Q # 04: Result: " + calculator(10, 5, '*') + "<br><br>");
+    
+        // Q # 05
+        function square(num) {
+            return num * num;
+        }
+    
+        document.write("Q # 05: Square: " + square(4) + "<br><br>");
+    
+        // Q # 06
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+    
+        document.write("Q # 06: Factorial: " + factorial(5) + "<br><br>");
+    
+        // Q # 07
+        function displayCounting(start, end) {
+            document.write("Q # 07: Counting: <br>");
+            for (var i = start; i <= end; i++) {
+                document.write(i + "<br>");
+            }
+            document.write("<br>");
+        }
+    
+        displayCounting(1, 10);
+    
+        // Q # 08
+        function calculateHypotenuse(base, perpendicular) {
+            function calculateSquare(x) {
+                return x * x;
+            }
+    
+            var hypotenuse = Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular));
+            return hypotenuse;
+        }
+    
+        document.write("Q # 08: Hypotenuse: " + calculateHypotenuse(3, 4) + "<br><br>");
+    
+        // Q # 09
+        function calculateArea(width, height) {
+            return width * height;
+        }
+    
+        // i. Arguments as values
+        document.write("Q # 09 (i): Area: " + calculateArea(5, 7) + "<br><br>");
+    
+        // ii. Arguments as variables
+        var w = 5;
+        var h = 7;
+        document.write("Q # 09 (ii): Area: " + calculateArea(w, h) + "<br><br>");
+    
+        // Q # 10
+        function isPalindrome(str) {
+            var reversed = str.split('').reverse().join('');
+            return str === reversed;
+        }
+    
+        document.write("Q # 10: Is palindrome? " + isPalindrome("madam") + "<br><br>");
+    
+        // Q # 11
+        function titleCase(str) {
+            return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        }
+    
+        document.write("Q # 11: Title Case: " + titleCase("the quick brown fox") + "<br><br>");
+    
+        // Q # 12
+        function findLongestWord(str) {
+            var words = str.split(' ');
+            var longest = words.reduce((longest, word) => word.length > longest.length ? word : longest, "");
+            return longest;
+        }
+    
+        document.write("Q # 12: Longest Word: " + findLongestWord("Web Development Tutorial") + "<br><br>");
+    
+        // Q # 13
+        function countOccurrences(str, letter) {
+            var count = 0;
+            for (let char of str) {
+                if (char === letter) count++;
+            }
+            return count;
+        }
+    
+        document.write("Q # 13: Occurrences: " + countOccurrences("JSResourceS.com", "o") + "<br><br>");
+    
+        // Q # 14
+        function calcCircumference(radius) {
+            var circumference = 2 * Math.PI * radius;
+            document.write("Q # 14 (i): The circumference is " + circumference + "<br><br>");
+        }
+    
+        function calcArea(radius) {
+            var area = Math.PI * radius * radius;
+            document.write("Q # 14 (ii): The area is " + area + "<br><br>");
+        }
+    
+        calcCircumference(5);
+        calcArea(5);
+    </script>
+    
+</body>
+</html>
